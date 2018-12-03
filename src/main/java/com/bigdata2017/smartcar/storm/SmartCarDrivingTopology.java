@@ -60,7 +60,7 @@ public class SmartCarDrivingTopology {
 		JedisPoolConfig jedisPoolConfig =
 			new JedisPoolConfig.
 			Builder().
-			setHost( "lx02.hadoop.com" ).
+			setHost( "lx2.hadoop.com" ).
 			setPort( 6379 ).
 			build();
 		topologyBuilder.setBolt( "redisBolt", new RedisBolt( jedisPoolConfig ), 1 ).shuffleGrouping( "esperBolt" );
