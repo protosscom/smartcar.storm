@@ -28,7 +28,7 @@ public class SmartCarDrivingTopology {
 		config.put( Config.NIMBUS_HOST, "lx02.hadoop.com" );
 		config.put( Config.NIMBUS_THRIFT_PORT, 6627 );
 		config.put( Config.STORM_ZOOKEEPER_PORT, 2181 );
-		config.put( Config.STORM_ZOOKEEPER_SERVERS, Arrays.asList( "lx02.hadoop.com" ) );	
+		config.put( Config.STORM_ZOOKEEPER_SERVERS, Arrays.asList( "lx2.hadoop.com" ) );	
 
 		// 토폴로지 등록
 		StormSubmitter.submitTopology( args[0], config, makeTopology() );
@@ -38,7 +38,7 @@ public class SmartCarDrivingTopology {
 		TopologyBuilder topologyBuilder = new TopologyBuilder();
 		
 		// Spout(Kafka) 생성 및 등록
-		BrokerHosts brokerHosts = new ZkHosts( "lx02.hadoop.com:2181" );
+		BrokerHosts brokerHosts = new ZkHosts( "lx2.hadoop.com:2181" );
 		String topicName = "SmartCar-Topic";
 		String zookeeperPathName = "/SmartCar-Topic";
 
