@@ -25,7 +25,7 @@ public class SmartCarDrivingTopology {
 		Config config = new Config();
 		
 		config.setDebug( true );
-		config.put( Config.NIMBUS_HOST, "lx02.hadoop.com" );
+		config.put( Config.NIMBUS_HOST, "lx2.hadoop.com" );
 		config.put( Config.NIMBUS_THRIFT_PORT, 6627 );
 		config.put( Config.STORM_ZOOKEEPER_PORT, 2181 );
 		config.put( Config.STORM_ZOOKEEPER_SERVERS, Arrays.asList( "lx2.hadoop.com" ) );	
